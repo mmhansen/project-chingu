@@ -1,0 +1,24 @@
+body {
+  padding-top: 50px;
+}
+.thumbnail {
+  float: left;
+  width: 25%;
+  height: 250px;
+  position: relative;
+}
+.thumbnail_image {
+  max-height: 180px;
+}
+@media (max-width: 480px) {
+  .thumbnail, .home {
+    width: 50%;
+  }
+}
+p {
+  font-size: 12px;
+}
+.user {
+  position: absolute;
+  left: 10px;
+}
