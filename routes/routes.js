@@ -34,6 +34,13 @@ module.exports = function (app) {
       res.render('register');
   });
 
+  app.delete('/chingu/:id', function(req, res){
+    Cohort.findByIdAndDelete(req.params.id).exec()
+      .then(function(){
+        res.redirect('/');
+      })
+  });
+
   app.post('/register', function(req, res) {
     Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
         if (err) {

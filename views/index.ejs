@@ -18,7 +18,8 @@
 
       <% for(var i=cohorts.length-1; i >= 0; i--) { %>
           <div class="thumbnail">
-              <img class="thumbnail_image" src="<%= cohorts[i].image %>" alt="<%= cohorts[i].name %>" >
+            <i id="<%= cohorts[i]._id %>" class="fa fa-times" aria-hidden="true"></i>
+            <img class="thumbnail_image" src="<%= cohorts[i].image %>" alt="<%= cohorts[i].name %>" >
             <div class="user">
               <p> <%= cohorts[i].name %> <br>
               <%= cohorts[i].description %></p>
@@ -27,6 +28,23 @@
         <% } %>
 
     </div><!-- /.container -->
+
+    <script>
+      $(document).ready(function(){
+
+        $('.fa-times').on('click', function(){
+          var id = $(this).attr('id');
+          $.ajax({
+            url: '/chingu/'+id,
+            type: 'DELETE',
+            complete: function(){
+              window.location.reload(true);
+            }
+          });
+        });
+
+      })
+    </script
 
   </body>
 </html>
