@@ -35,7 +35,7 @@ module.exports = function (app) {
   });
 
   app.delete('/chingu/:id', function(req, res){
-    Cohort.findByIdAndDelete(req.params.id).exec()
+    Cohort.findByIdAndRemove(req.params.id).exec()
       .then(function(){
         res.redirect('/');
       })
