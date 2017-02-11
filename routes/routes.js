@@ -35,10 +35,14 @@ module.exports = function (app) {
   });
 
   app.delete('/chingu/:id', function(req, res){
-    Cohort.findByIdAndRemove(req.params.id).exec()
-      .then(function(){
-        res.redirect('/');
-      })
+    if(typeof req.user !== "undefined"){
+      Cohort.findByIdAndRemove(req.params.id).exec()
+        .then(function(){
+          res.redirect('/');
+        })
+    }else{
+      res.redirect('/');
+    }
   });
 
   app.post('/register', function(req, res) {
