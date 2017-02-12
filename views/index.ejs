@@ -22,10 +22,10 @@
             <i id="<%= cohorts[i]._id %>" class="fa fa-times" aria-hidden="true"></i>
             <% } %>
             <!--<img class="thumbnail_image" src="<%= cohorts[i].image %>" alt="<%= cohorts[i].name %>" >-->
-            <div class="title">
+            <div id="<%= cohorts[i].name %>-title" class="title">
               <h3> <%= cohorts[i].name %> </h3>
             </div>
-            <div class="description">
+            <div id="<%= cohorts[i].name %>-desc" class="description">
               <h4> <%= cohorts[i].description %> </h4>
             </div>
           </div>
@@ -35,6 +35,10 @@
 
     <script>
       $(document).ready(function(){
+        var cohortsArray = <% (cohorts.length > 0)? cohorts : []; %>
+        for(var i = 0; i<cohortsArray.length;i++){
+          $("#"+cohortsArray[i].name+"-desc").css({'width':($("#"+cohortsArray[i].name+"-title").width()+'px')});
+        }
 
         $('.fa-times').on('click', function(){
           var id = $(this).attr('id');
