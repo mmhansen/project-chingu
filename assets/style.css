@@ -36,7 +36,7 @@ p {
 }
 .title, .description {
   font-family: 'Montserrat', sans-serif;
-  position: aboslute;
+  position: absolute;
   color: #fff;
 }
 .title {
