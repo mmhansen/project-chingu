@@ -35,10 +35,6 @@
 
     <script>
       $(document).ready(function(){
-        var cohortsArray = <%- (cohorts.length > 0)? cohorts : []; %>;
-        for(var i = 0; i<cohortsArray.length;i++){
-          $("#"+cohortsArray[i].name+"-desc").css({'width':($("#"+cohortsArray[i].name+"-title").width()+'px')});
-        }
 
         $('.fa-times').on('click', function(){
           var id = $(this).attr('id');

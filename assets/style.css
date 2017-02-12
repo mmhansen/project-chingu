@@ -44,6 +44,8 @@ p {
   right: 0px;
   background: darkgreen;
   border-radius: 5px 5px 0 0;
+  text-align: center;
+  width: 70%;
 }
 .title h3 {  
   font-weight: bold;
@@ -56,6 +58,7 @@ p {
   background: darkgreen;
   opacity: 0.8;
   text-align: center;
+  width: 70%;
 }
 .description h4 {
   margin: 0;
