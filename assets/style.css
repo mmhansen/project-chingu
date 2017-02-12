@@ -6,6 +6,9 @@ body {
   width: 25%;
   height: 200px;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 50px;
 }
 .thumbnail_image {
   max-height: 180px;
