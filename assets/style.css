@@ -40,14 +40,15 @@ p {
   color: #fff;
 }
 .title {
-  top: -50px;
-  right: 5px;
+  top: -36px;
+  right: 0px;
   background: darkgreen;
+  border-radius: 5px 5px 0 0;
 }
 .title h3 {  
   font-weight: bold;
   margin: 0;
-  padding: 10px;
+  padding: 5px 10px;
 }
 .description {
   top: 10px;
