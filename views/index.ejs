@@ -17,11 +17,11 @@
       <p>something something</p>
 
       <% for(var i=cohorts.length-1; i >= 0; i--) { %>
-          <div class="thumbnail">
+          <div class="thumbnail" style="background-image: url(<%= cohorts[i].image %>);">
             <% if (typeof user !== "undefined") { %>
             <i id="<%= cohorts[i]._id %>" class="fa fa-times" aria-hidden="true"></i>
             <% } %>
-            <img class="thumbnail_image" src="<%= cohorts[i].image %>" alt="<%= cohorts[i].name %>" >
+            <!--<img class="thumbnail_image" src="<%= cohorts[i].image %>" alt="<%= cohorts[i].name %>" >-->
             <div class="user">
               <p> <%= cohorts[i].name %> <br>
               <%= cohorts[i].description %></p>
