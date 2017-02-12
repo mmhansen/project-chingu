@@ -34,3 +34,6 @@ p {
 .fa-times:hover {
   opacity: 0.8;
 }
+.title, .description {
+  font-family: 'Montserrat', sans-serif;
+}
