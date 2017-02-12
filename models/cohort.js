@@ -5,7 +5,7 @@ var Cohort = new Schema({
   name: String,
   image: String,
   description: String,
-  started: Boolean
+  space: String
 });
 
 module.exports = mongoose.model('Cohort', Cohort);

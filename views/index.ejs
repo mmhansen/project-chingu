@@ -22,11 +22,14 @@
             <i id="<%= cohorts[i]._id %>" class="fa fa-times" aria-hidden="true"></i>
             <% } %>
             <!--<img class="thumbnail_image" src="<%= cohorts[i].image %>" alt="<%= cohorts[i].name %>" >-->
-            <div id="<%= cohorts[i].name %>-title" class="title">
+            <div class="title">
               <h3> <%= cohorts[i].name %> </h3>
             </div>
-            <div id="<%= cohorts[i].name %>-desc" class="description">
+            <div class="description">
               <h4> <%= cohorts[i].description %> </h4>
+            </div>
+            <div class="space">
+              <p> space: <%= cohorts[i].space %> </p>
             </div>
           </div>
         <% } %>

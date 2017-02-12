@@ -19,7 +19,7 @@ module.exports = function (app) {
         name: req.body.name,
         image: req.body.image,
         description: req.body.description,
-        started: req.body.started
+        space: req.body.space
       })
       newCohort.save()
         .then(function(){
