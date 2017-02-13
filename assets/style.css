@@ -9,6 +9,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 50px;
+  border-radius: 0;
 }
 .thumbnail_image {
   max-height: 180px;
