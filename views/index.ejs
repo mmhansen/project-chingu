@@ -50,9 +50,14 @@
           });
         });
 
-        $(".title").css("top", "-"+ $(this).innerHeight()+"px");
-
       })
+
+      $(window).load(function() {
+        setTimeout(function() {          
+          $(".title").css("top", "-"+ $(this).innerHeight()+"px");
+        }, 1);
+      });
+
     </script>
 
   </body>
