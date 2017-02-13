@@ -37,8 +37,14 @@ p {
   right: 8px;
   color: #bd081c;
 }
-.fa-times:hover {
+.fa-times:hover, .fa-cog:hover {
   opacity: 0.8;
+}
+.fa-cog {
+  cursor: pointer;
+  bottom: 6px;
+  position: absolute;
+  right: 16px;
 }
 .title, .description, .space {
   font-family: 'Montserrat', sans-serif;

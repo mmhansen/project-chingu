@@ -45,7 +45,7 @@ module.exports = function (app) {
     }
   });
 
-  app.put('/chingu/:id', function(req, res){
+  app.post('/chingu/:id', function(req, res){
     if(typeof req.user !== "undefined"){
       Cohort.findByIdAndUpdate(req.params.id, {space: req.body.space}).exec()
         .then(function(){
