@@ -13,9 +13,15 @@ body {
 .thumbnail_image {
   max-height: 180px;
 }
-@media (max-width: 480px) {
-  .thumbnail, .home {
+@media (max-width: 768px) {
+  .thumbnail {
     width: 50%;
+  }
+  .title {
+    top: -25px;
+  }
+  .title h3 {
+    font-size: 1.1em;
   }
 }
 p {
@@ -47,7 +53,8 @@ p {
   text-align: center;
   width: 70%;
 }
-.title h3 {  
+.title h3 {
+  font-size: 1.7em;
   font-weight: bold;
   margin: 0;
   padding: 5px 10px;
