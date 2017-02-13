@@ -31,7 +31,8 @@ p {
   left: 10px;
 }
 .fa-times {
-  top: 6px;
+  cursor: pointer;
+  bottom: 6px;
   position: absolute;
   right: 8px;
   color: #bd081c;

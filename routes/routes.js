@@ -45,6 +45,15 @@ module.exports = function (app) {
     }
   });
 
+  app.put('/chingu/:id', function(req, res){
+    if(typeof req.user !== "undefined"){
+      Cohort.findByIdAndUpdate(req.params.id, {space: req.body.space}).exec()
+        .then(function(){
+          res.redirect('/');
+        })
+    }
+  });
+
   app.post('/register', function(req, res) {
     Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
         if (err) {

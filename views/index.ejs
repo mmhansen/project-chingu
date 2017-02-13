@@ -20,6 +20,9 @@
           <div class="thumbnail" style="background-image: url(<%= cohorts[i].image %>);">
             <% if (typeof user !== "undefined") { %>
             <i id="<%= cohorts[i]._id %>" class="fa fa-times" aria-hidden="true"></i>
+            <a class="update" data-toggle="modal" data-target="#updateModal" id="<%= cohorts[i]._id %>">
+              <i id="<%= cohorts[i]._id %>" class="fa fa-cog" aria-hidden="true"></i>
+            </a>
             <% } %>
             <!--<img class="thumbnail_image" src="<%= cohorts[i].image %>" alt="<%= cohorts[i].name %>" >-->
             <div class="title">
@@ -36,6 +39,25 @@
 
     </div><!-- /.container -->
 
+    <div id="updateModal" class="modal fade" role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add new Cohort</h4>
+          </div>
+          <div class="modal-body">
+            <form id="updateForm" method="put" >
+              <input class="form-control" type="text" name="space" placeholder="Space Available" />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       $(document).ready(function(){
 
@@ -50,13 +72,11 @@
           });
         });
 
+        $('.update[data-toggle=modal]').click(function () {
+          var cohort_id = $(this).attr('id');
+          $('#updateForm').attr("action", "/chingu/"+cohort_id);
+        })
       })
-
-      /*$(window).load(function() {
-        setTimeout(function() {          
-          $(".title").css("top", "-"+ $(this).innerHeight()+"px");
-        }, 1);
-      });*/
 
     </script>
 
