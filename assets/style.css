@@ -13,7 +13,7 @@ body {
 .thumbnail_image {
   max-height: 180px;
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .thumbnail {
     width: 50%;
   }
