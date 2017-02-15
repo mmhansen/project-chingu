@@ -33,16 +33,36 @@
       </div>
       <div class="modal-body">
         <form action="/addCohort" method="post" >
-          <input class="form-control" type="text" name="name" placeholder="Cohort Name" />
-          <input class="form-control" type="url" name="image" placeholder="Image Link" />
-          <textarea class="form-control" type="text" name="description" placeholder="Small description"></textarea>
-          <input class="form-control" type="text" name="space" placeholder="Available Space" />
+          <input id="c-name" class="form-control" type="text" name="name" placeholder="Cohort Name" />
+          <input id="c-image" class="form-control" type="url" name="image" placeholder="Image Link" />
+          <textarea id="c-desc" class="form-control" type="text" name="description" placeholder="Small description"></textarea>
+          <input id="c-space" class="form-control" type="text" name="space" placeholder="Available Space" />
           <input type="submit" class="btn btn-success" value="Submit" />
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+        <div id="preview" class="thumbnail">
+          <div class="title">
+            <h3 id="p-title">  </h3>
+          </div>
+          <div class="description">
+            <h4 id="p-desc">  </h4>
+          </div>
+          <div class="space">
+            <p id="p-space"> space:  </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </div>
+<script>
+  $('#c-name, #c-image, #c-desc, #c-space').on('change keyup paste', function() {
+    $('#preview').css("background-image", "url("+$("#c-image").val()+");");
+    $("#p-title").text($("#c-title").val());
+    $("#p-desc").text($("#c-desc").val());
+    $("#p-space").text("space: "+$("#c-space").val());
+  });
+</script>
