@@ -44,7 +44,7 @@
 
         <div id="preview" class="thumbnail">
           <div class="title">
-            <h3 id="p-title">  </h3>
+            <h3 id="p-name">  </h3>
           </div>
           <div class="description">
             <h4 id="p-desc">  </h4>
@@ -60,8 +60,8 @@
 </div>
 <script>
   $('#c-name, #c-image, #c-desc, #c-space').on('change keyup paste', function() {
-    $('#preview').css("background-image", "url("+$("#c-image").val()+");");
-    $("#p-title").text($("#c-title").val());
+    $('#preview').css("background-image", "url("+$("#c-image").val()+")");
+    $("#p-name").text($("#c-name").val());
     $("#p-desc").text($("#c-desc").val());
     $("#p-space").text("space: "+$("#c-space").val());
   });
