@@ -24,15 +24,15 @@ body {
 }
 nav {
   font-weight: bold;
+  background-color: black;
 }
 p {
   font-size: 12px;
 }
 #starter-jumbo {
   background: darkgreen;
-  margin-top: 25%;
-  margin-bottom: 20%;
   text-align: center;
+  color: #fff;
 }
 .user {
   position: absolute;
