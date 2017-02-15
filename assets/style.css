@@ -1,5 +1,6 @@
 body {
   padding-top: 50px;
+  font-family: 'Montserrat', sans-serif;
 }
 .thumbnail {
   float: left;
@@ -10,9 +11,6 @@ body {
   background-repeat: no-repeat;
   margin-top: 50px;
   border-radius: 0;
-}
-.thumbnail_image {
-  max-height: 180px;
 }
 @media (max-width: 768px) {
   .thumbnail {
@@ -48,7 +46,6 @@ p {
   right: 20px;
 }
 .title, .description, .space {
-  font-family: 'Montserrat', sans-serif;
   position: absolute;
   color: #fff;
 }

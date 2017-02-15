@@ -9,7 +9,7 @@ module.exports = function (app) {
   app.get('/', function (req, res) {
     Cohort.find({}).exec()
       .then(function(data){
-        res.render('index', { user : req.user, cohorts: data });
+        res.render('index', { user : req.user, cohorts: data, secretLink: process.env.SECRET_LINK });
       })
   });
 
@@ -30,7 +30,7 @@ module.exports = function (app) {
     }
   })
 
-  app.get('/register', function(req, res) {
+  app.get(process.env.SECRET_LINK, function(req, res) {
       res.render('register');
   });
 

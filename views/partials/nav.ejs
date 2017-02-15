@@ -11,19 +11,36 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">Home</a></li>
+            <li><a href="/">COHORTS</a></li>
+            <li><a href="/">ABOUT</a></li>
+            <li><a href="/">CONTACT</a></li>
             <% if (!user) { %>
                 <li><a href="/login"><i class="fa fa-lock" aria-hidden="true"></i></a></li>
             <% } else { %>
                 <li><a href="#"><%= user.username %></a>
                 <li><a href="#" data-toggle="modal" data-target="#newCohort">Add new Cohort</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#register">Register</a></li>
                 <li><a href="/logout">Logout</a></li>
             <% } %>
         </ul>
     </div><!--/.nav-collapse -->
     </div>
 </nav>
-
+<% if (typeof user !== "undefined") { %>
+<div id="register" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Share this link to register a new admin:</h4>
+      </div>
+      <div class="modal-body">
+        <p>https://project-chingu.herokuapp.com<%= secretLink %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
 <div id="newCohort" class="modal fade" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
