@@ -22,8 +22,17 @@ body {
     width: 100%;
   }
 }
+nav {
+  font-weight: bold;
+}
 p {
   font-size: 12px;
+}
+#starter-jumbo {
+  background: darkgreen;
+  margin-top: 25%;
+  margin-bottom: 20%;
+  text-align: center;
 }
 .user {
   position: absolute;
