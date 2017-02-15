@@ -43,6 +43,7 @@ p {
   background-color: darkgreen;
   color: #fff;
   margin-top: 25px;
+  padding: 40px 0;
 }
 .user {
   position: absolute;
