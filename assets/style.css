@@ -42,6 +42,7 @@ p {
 #cohort-about {
   background-color: darkgreen;
   color: #fff;
+  margin-top: 25px;
 }
 .user {
   position: absolute;
