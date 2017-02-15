@@ -7,12 +7,12 @@
     
     <% include ./partials/nav %>
 
-    <div class="container">
+    <div class="jumbotron" id="starter-jumbo">
+      <h1><b>LEARN MORE<br> FEEL LESS FRUSTRATED<br> GET THE JOB</b></h1>
+      <h3>Web-dev gyms for those of us who don't have the money/time for expensive coding bootcamps.</h3>
+    </div>
 
-      <div class="jumbotron" id="starter-jumbo">
-        <h1><b>LEARN MORE<br> FEEL LESS FRUSTRATED<br> GET THE JOB</b></h1>
-        <h3>Web-dev gyms for those of us who don't have the money/time for expensive coding bootcamps.</h3>
-      </div>
+    <div class="container">
 
       <% for(var i=cohorts.length-1; i >= 0; i--) { %>
           <div class="thumbnail" style="background-image: url(<%= cohorts[i].image %>);">
