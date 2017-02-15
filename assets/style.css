@@ -91,5 +91,7 @@ p {
   padding: 5px;
 }
 #preview {
-  margin: auto;
+  width: 275px;
+  height: 190px;
+  float: none;
 }
