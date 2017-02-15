@@ -35,6 +35,9 @@ p {
   color: #fff;
   border-radius: 0;
 }
+#cohort-title {
+  text-align: center;
+}
 .user {
   position: absolute;
   left: 10px;
