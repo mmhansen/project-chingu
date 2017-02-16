@@ -13,11 +13,11 @@
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#cohort-title">COHORTS</a></li>
             <li><a href="#cohort-about">ABOUT</a></li>
-            <li><a href="/">CONTACT</a></li>
+            <li><a href="#cohort-contact">CONTACT</a></li>
             <% if (!user) { %>
                 <li><a href="/login"><i class="fa fa-lock" aria-hidden="true"></i></a></li>
             <% } else { %>
-                <li><a href="#"><%= user.username %></a>
+                <li><a ><%= user.username %></a>
                 <li><a href="#" data-toggle="modal" data-target="#newCohort">Add new Cohort</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#register">Register</a></li>
                 <li><a href="/logout">Logout</a></li>
